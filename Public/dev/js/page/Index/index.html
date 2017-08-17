@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <title>{$seo_title|default='微知-轻松一点&nbsp;&nbsp;从心出发'}</title>
+  <meta charset="UTF-8">
+  <include file="./Application/Home/View/Common/head_meta.html" />
+
+  <meta name="keywords" content="{$seo_keyword|default='微知,微知内容宝,微知公众号助手,微信文章,热门话题,微信公众号分类,微知编辑器,微信素材,内容服务平台'}">
+  <meta name="description" content="{$seo_descript|default='微知是通过整合多来源信息内容，为用户提供海量素材资源，包括文章、话题、图片等，同时提供微信编辑器、多账号管理、定时群发、智能标签等助您轻松创作更优质的内容。'}">
+  <meta property="wb:webmaster" content="0ead2ebf33d6fc90" />
+  <meta name="baidu-site-verification" content="dKghPi29VZ" />
+  <!-- <link rel="stylesheet" type="text/css" href="__RESPATH__/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="__RESPATH__/css/individual/index.css" /> -->
+</head>
+
+<body class="safe_load">
+  <include file="./Application/Home/View/Common/backup/header_nav.html" />
+  <div class="main_box">
+    <div class="home_content">
+      <div class="banner_container">
+        <div id="carousel" class="carousel slide home_carousel" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <foreach name="banners" item="bannerItem" key="k">
+              <li data-target="#carousel" data-slide-to="{$k}" class="{$k == '0' ? 'active' : ''}"></li>&nbsp;
+            </foreach>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+
+            <foreach name="banners" item="bannerItem" key="k">
+              <div class="item {$k == '0' ? 'active' : ''}">
+                <a <if condition="$bannerItem['activity_url']">href="{$bannerItem['activity_url']}" {$bannerItem['isblankopen'] == '1' ? 'target="_blank"' : ''}</if>>
+                                <img src="{$bannerItem.url}" alt="{$bannerItem.desc}">
+                            </a>
+              </div>
+            </foreach>
+
+          </div>
+        </div>
+      </div>
+      <nav class="nav_function">
+        <ul class="nav_ul">
+          <li class="nav_item_li">
+            <a href="/search/articles?from_nav=1" class="nav_link nav_link_1">
+              <div class="icon_container icon_container_1">
+                <div class="icon_item icon_1"></div>
+                <div class="icon_item icon_2"></div>
+              </div><br/>
+              <div class="nav_text">
+                <p class="nav_title_text">找素材</p>
+                <p class="gray">多渠道采集素材，第一时间热点<br/>更新，你想要的全都有</p>
+                <span class="user_ra">立即使用</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav_item_li">
+            <a href="/edit_text?edit_type=1" class="nav_link nav_link_4" target="_black">
+              <div class="icon_container icon_container_4">
+                <div class="icon_item icon_1"></div>
+                <div class="icon_item icon_2"></div>
+                <div class="icon_item icon_3"></div>
+                <div class="icon_item icon_4"></div>
+              </div><br/>
+              <div class="nav_text">
+                <p class="nav_title_text">微知编辑器</p>
+                <p class="gray">没有大手笔，唯有小惊喜。<br/>第二走心的图文编辑器</p>
+                <span class="user_ra">立即使用</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav_item_li">
+            <a rel="external nofollow" href="javascript: void(0);" class="nav_link nav_link_2 js_article_import">
+              <div class="icon_container icon_container_2">
+                <div class="icon_item icon_1"></div>
+                <div class="icon_item icon_2"></div>
+              </div><br/>
+              <div class="nav_text">
+                <p class="nav_title_text">图文导入</p>
+                <p class="gray">一键导入心仪文章或Word文本，<br/>大大提升工作效率</p>
+                <span class="user_ra">立即使用</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav_item_li">
+            <a href="/smart_tag" class="nav_link nav_link_3">
+              <div class="icon_container icon_container_3">
+                <div class="icon_item icon_1"></div>
+                <div class="icon_item icon_2"></div>
+              </div><br/>
+              <div class="nav_text">
+                <p class="nav_title_text">智能标签</p>
+                <p class="gray">快速提取文本核心词语，生成精准<br/>标签，高效便捷管理文章</p>
+                <span class="user_ra">立即使用</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="product_show product_show1">
+        <div class="product_show_inner">
+          <div class="describtion">
+            <h2 class="title animatePlay">坐拥海量心仪素材</h2>
+            <p class="gray fulldec animatePlay">每日广泛采集网络各大主流平台头条爆点，
+              <br/>实时更新各类热门话题、优质文章、精美图
+              <br/>片，为您的创作提供最全面的素材。</p>
+          </div>
+          <div class="picture_show">
+            <img class="img1 animatePlay" src="//img01.bigwe.com/home_banner/section1_2_1.png" alt="微知素材-图片">
+            <img class="img2 animatePlay" src="//img01.bigwe.com/home_banner/section1_1_1.png" alt="微知素材-文章">
+          </div>
+        </div>
+      </section>
+      <section class="product_show product_show2">
+        <div class="product_show_inner">
+          <div class="describtion">
+            <h2 class="title animatePlay">图文、文档快速导入</h2>
+            <p class="gray fulldec animatePlay">原版导入外网图文、word文档，远离“复制粘贴”，
+              <br/>避免重复排版。</p>
+          </div>
+          <div class="picture_show">
+            <img class="img1 animatePlay" src="//img01.bigwe.com/home_banner/section2_1.png" alt="微知编辑器">
+            <img class="img2 animatePlay" src="//img01.bigwe.com/home_banner/section2_2_u1.png" alt="文章导入">
+            <img class="img3 animatePlay" src="//img01.bigwe.com/home_banner/section2_3.png" alt="文档导入">
+          </div>
+        </div>
+      </section>
+      <section class="product_show product_show3">
+        <div class="product_show_inner">
+          <div class="describtion">
+            <h2 class="title animatePlay">精准提取文本标签</h2>
+            <p class="gray fulldec animatePlay">快速切分文本中的关键词，精准提取文本标签，让你不再为提炼文章的标签而烦恼，文章的出镜率更高、更快、更准。</p>
+          </div>
+          <div class="picture_show">
+            <img class="img1 animatePlay" src="//img01.bigwe.com/home_banner/section3_1.png" alt="微知智能标签 轻松抓取关键字，向烧抓狂说NO">
+          </div>
+        </div>
+      </section>
+    </div>
+    <include file="./Application/Home/View/Common/footer.html" />
+  </div>
+  <include file="./Application/Home/View/Index/guide_wrap.html" />
+</body>
+<!-- <script type="text/javascript" data-main="__RESPATH__/js/indexController.js" src="__RESPATH__/js/libs/require.js"></script> -->
+
+</html>

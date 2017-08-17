@@ -1,0 +1,26 @@
+{
+  "indent_size": 2,
+  "end_with_newline": true,
+  "html": {
+    "wrap_attributes": "auto",
+    "indent_scripts": "separate",
+    "js": {
+      "indent_size": 2,
+      "preserve-newlines": true,
+      "space_in_paren": true,
+      "indent_char": " "
+    },
+    "css": {
+      "indent_size": 2
+    }
+  },
+  "css": {
+    "indent_size": 2
+  },
+  "js": {
+    "preserve-newlines": true,
+    "space_in_paren": true,
+    "indent_char": " ",
+    "e4x": true
+  }
+}
